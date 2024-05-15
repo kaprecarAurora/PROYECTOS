@@ -31,8 +31,35 @@ def opciones():
                 if opcion2 == "N":
                     break
 
+                elif opcion2 == "Y":
+                    continue
                 else:
                     print("\nOpción no contemplada")
-                    continue
-                   
+        
+        if opcion == 2:
+
+            while True:
+
+                archivo = str(input("\nIntroduce el nombre del archivo que desea eliminar: "))
+
+                for i in archivos_sistema:
+
+                    if i == archivo:
+                        archivos_sistema.remove(archivo)
+
+                        print(f"\nEstos son los archivos que tienes en el sistema:\n")
+
+                        for i in archivos_sistema:
+                            print(i, end=' | ')
+
+                        print("\n")
+
+                    else:
+                        continue
+
+                opcion3 = str(input("Desea seguir eliminando archivos (Y/N): "))
+
+                if opcion3 == "N":
+                    break 
+
 opciones()
